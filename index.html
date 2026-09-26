@@ -148,9 +148,9 @@ h1 span{
   filter:drop-shadow(0 28px 25px rgba(0,0,0,.5));
   animation:heroPatchReveal 1.8s cubic-bezier(.16,1,.3,1) both
 }
-.patch-art svg{width:100%;height:100%;overflow:visible;transform:none!important}
+.patch-art img{width:100%;height:100%;overflow:visible;transform:none!important}
 .patch-art img{width:100%;height:100%;object-fit:cover;border-radius:20px}
-.patch-art svg path:first-child{filter:drop-shadow(0 0 18px rgba(229,184,92,.18))}
+.patch-art img path:first-child{filter:drop-shadow(0 0 18px rgba(229,184,92,.18))}
 
 /* GENERAL */
 .section{padding:100px 0}
@@ -200,11 +200,11 @@ h1 span{
   transform:perspective(900px) rotateX(3deg) rotateY(-5deg) translateY(-8px);
   box-shadow:0 35px 85px rgba(15,23,42,.18),0 0 40px rgba(229,184,92,.08)
 }
-.product-visual svg{
+.product-visual img{
   width:100%;max-width:330px;filter:drop-shadow(0 20px 16px rgba(0,0,0,.22));
   position:relative;z-index:2;transition:transform .55s
 }
-.product-row:hover .product-visual svg{transform:scale(1.055) rotate(-2deg)}
+.product-row:hover .product-visual img{transform:scale(1.055) rotate(-2deg)}
 
 /* IMAGE CAROUSEL (left/right) */
 .product-visual.carousel{padding:0;overflow:hidden}
@@ -215,7 +215,7 @@ h1 span{
 .carousel-slide{
   min-width:100%;display:grid;place-items:center;padding:28px
 }
-.carousel-slide svg{width:100%;max-width:330px;filter:drop-shadow(0 20px 16px rgba(0,0,0,.22))}
+.carousel-slide img{width:100%;max-width:330px;filter:drop-shadow(0 20px 16px rgba(0,0,0,.22))}
 .carousel-slide img{width:100%;height:100%;object-fit:cover;border-radius:16px}
 .placeholder-slide{
   min-height:294px;border:2px dashed rgba(0,0,0,.18);border-radius:16px;
@@ -274,7 +274,7 @@ h1 span{
   border:1px solid rgba(255,255,255,.11);border-radius:28px;padding:35px;
   display:grid;place-items:center;min-height:350px;box-shadow:var(--shadow);overflow:hidden
 }
-.feature-art svg{max-width:350px;width:100%;filter:drop-shadow(0 0 28px rgba(229,184,92,.15));animation:patchFloat 6s ease-in-out infinite}
+.feature-art img{max-width:350px;width:100%;filter:drop-shadow(0 0 28px rgba(229,184,92,.15));animation:patchFloat 6s ease-in-out infinite}
 .feature h2{font-size:clamp(2rem,4vw,3.3rem);line-height:1.05;margin-bottom:20px;letter-spacing:-1.7px}
 .feature p{color:#b8c1cf;margin-bottom:25px}
 .feature-list{display:grid;grid-template-columns:1fr 1fr;gap:20px}
@@ -358,7 +358,7 @@ input[type=file]{padding:10px;font-size:.88rem}
   animation:waPulse 3s infinite;transition:.3s
 }
 .floating-wa:hover{transform:scale(1.08);box-shadow:0 12px 35px rgba(37,211,102,.4)}
-.floating-wa svg{width:31px;height:31px}
+.floating-wa img{width:31px;height:31px}
 
 /* SCROLL REVEAL */
 .reveal{opacity:0;transform:translateY(35px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
@@ -545,7 +545,7 @@ input[type=file]{padding:10px;font-size:.88rem}
       transition:transform .2s ease;
       transform-origin:center;
     }
-    .logo-modal-logo svg{
+    .logo-modal-logo img{
       width:100%;
       height:100%;
       max-width:100%;
@@ -593,13 +593,13 @@ input[type=file]{padding:10px;font-size:.88rem}
       </div>
       <div class="hero-visual" aria-label="Decorative custom patch illustration">
         <div class="patch-art">
-          <svg viewBox="0 0 400 330" role="img" aria-label="STAR LABELS custom patch illustration">
+          <img viewBox="0 0 400 330" role="img" aria-label="STAR LABELS custom patch illustration">
             <path d="M70 38 L330 38 Q350 38 350 60 L350 250 Q350 275 325 275 L75 275 Q50 275 50 250 L50 60 Q50 38 70 38Z" fill="#172033" stroke="#f1c56c" stroke-width="9"/>
             <path d="M82 60 H318 V250 H82Z" fill="#26364b" stroke="#d8a84e" stroke-width="3" stroke-dasharray="7 5"/>
             <text x="200" y="145" text-anchor="middle" font-size="48" font-weight="900" fill="#fff" font-family="Arial">STAR</text>
             <text x="200" y="190" text-anchor="middle" font-size="28" font-weight="900" fill="#e7b75b" font-family="Arial" letter-spacing="5">LABELS</text>
             <path d="M125 215 H275" stroke="#fff" stroke-width="3" opacity=".7"/>
-          </svg>
+          </img>
         </div>
       </div>
     </div>
@@ -617,7 +617,7 @@ input[type=file]{padding:10px;font-size:.88rem}
       <article class="product-row reveal">
         <div class="product-visual carousel" data-carousel>
           <div class="carousel-track">
-            <div class="carousel-slide"><svg viewBox="0 0 300 260" aria-label="PVC patch illustration"><path d="M150 18 185 55 238 48 245 100 282 130 245 165 238 215 185 208 150 242 115 208 62 215 55 165 18 130 55 100 62 48 115 55Z" fill="#1e293b" stroke="#d8a84e" stroke-width="8"/><path d="M150 55 173 94 220 100 185 132 195 180 150 157 105 180 115 132 80 100 127 94Z" fill="#d8a84e"/><text x="150" y="139" text-anchor="middle" font-size="23" font-weight="900" fill="#fff">PVC</text></svg></div>
+            <div class="carousel-slide"><img viewBox="0 0 300 260" aria-label="PVC patch illustration"><path d="M150 18 185 55 238 48 245 100 282 130 245 165 238 215 185 208 150 242 115 208 62 215 55 165 18 130 55 100 62 48 115 55Z" fill="#1e293b" stroke="#d8a84e" stroke-width="8"/><path d="M150 55 173 94 220 100 185 132 195 180 150 157 105 180 115 132 80 100 127 94Z" fill="#d8a84e"/><text x="150" y="139" text-anchor="middle" font-size="23" font-weight="900" fill="#fff">PVC</text></img></div>
             <div class="carousel-slide placeholder-slide"><span>Image 2 — add photo</span></div>
           </div>
           <button type="button" class="carousel-btn prev" aria-label="Previous image">‹</button>
@@ -630,7 +630,7 @@ input[type=file]{padding:10px;font-size:.88rem}
         <div class="product-copy"><p class="number">02 / EMBROIDERY</p><h3>Custom Embroidery Patches</h3><p>Classic embroidered texture with premium stitching and precise finishing.</p><ul><li>High Quality Thread</li><li>Detailed Stitching</li><li>Custom Shapes</li><li>Multiple Thread Colors</li><li>Premium Backing Options</li></ul><a href="#quote" class="text-link" data-product="Custom Embroidery Patch">Create Embroidery Patch →</a></div>
         <div class="product-visual carousel" data-carousel>
           <div class="carousel-track">
-            <div class="carousel-slide"><svg viewBox="0 0 300 260" aria-label="Embroidery patch illustration"><path d="M150 20 178 45 218 40 228 80 265 105 245 145 250 185 205 195 180 225 150 210 120 225 95 195 50 185 55 145 35 105 72 80 82 40 122 45Z" fill="#7c2736" stroke="#f5d8a1" stroke-width="7" stroke-dasharray="5 4"/><text x="150" y="125" text-anchor="middle" font-size="26" font-weight="900" fill="#fff">CUSTOM</text><text x="150" y="157" text-anchor="middle" font-size="22" font-weight="900" fill="#f5d8a1">THREAD</text></svg></div>
+            <div class="carousel-slide"><img viewBox="0 0 300 260" aria-label="Embroidery patch illustration"><path d="M150 20 178 45 218 40 228 80 265 105 245 145 250 185 205 195 180 225 150 210 120 225 95 195 50 185 55 145 35 105 72 80 82 40 122 45Z" fill="#7c2736" stroke="#f5d8a1" stroke-width="7" stroke-dasharray="5 4"/><text x="150" y="125" text-anchor="middle" font-size="26" font-weight="900" fill="#fff">CUSTOM</text><text x="150" y="157" text-anchor="middle" font-size="22" font-weight="900" fill="#f5d8a1">THREAD</text></img></div>
             <div class="carousel-slide placeholder-slide"><span>Image 2 — add photo</span></div>
           </div>
           <button type="button" class="carousel-btn prev" aria-label="Previous image">‹</button>
@@ -641,7 +641,7 @@ input[type=file]{padding:10px;font-size:.88rem}
       <article class="product-row reveal">
         <div class="product-visual carousel" data-carousel>
           <div class="carousel-track">
-            <div class="carousel-slide"><svg viewBox="0 0 300 260" aria-label="PVC keychain illustration"><path d="M145 25a45 45 0 1 1 0 90 45 45 0 0 1 0-90M145 48a22 22 0 1 0 0 44 22 22 0 0 0 0-44" fill="#64748b" stroke="#334155" stroke-width="5"/><path d="M145 115v22" stroke="#64748b" stroke-width="12"/><rect x="55" y="135" width="180" height="100" rx="25" fill="#1e293b" stroke="#d8a84e" stroke-width="7"/><text x="145" y="178" text-anchor="middle" font-size="24" font-weight="900" fill="#fff">YOUR</text><text x="145" y="207" text-anchor="middle" font-size="22" font-weight="900" fill="#e7b75b">LOGO</text></svg></div>
+            <div class="carousel-slide"><img viewBox="0 0 300 260" aria-label="PVC keychain illustration"><path d="M145 25a45 45 0 1 1 0 90 45 45 0 0 1 0-90M145 48a22 22 0 1 0 0 44 22 22 0 0 0 0-44" fill="#64748b" stroke="#334155" stroke-width="5"/><path d="M145 115v22" stroke="#64748b" stroke-width="12"/><rect x="55" y="135" width="180" height="100" rx="25" fill="#1e293b" stroke="#d8a84e" stroke-width="7"/><text x="145" y="178" text-anchor="middle" font-size="24" font-weight="900" fill="#fff">YOUR</text><text x="145" y="207" text-anchor="middle" font-size="22" font-weight="900" fill="#e7b75b">LOGO</text></img></div>
             <div class="carousel-slide placeholder-slide"><span>Image 2 — add photo</span></div>
           </div>
           <button type="button" class="carousel-btn prev" aria-label="Previous image">‹</button>
@@ -654,7 +654,7 @@ input[type=file]{padding:10px;font-size:.88rem}
         <div class="product-copy"><p class="number">04 / ZIP PULLERS</p><h3>PVC Zip Pullers</h3><p>Small details that make a big difference. Turn your zipper into a custom branded feature.</p><ul><li>Custom Shapes</li><li>Premium PVC</li><li>Custom Colors</li><li>Multiple Hardware Options</li></ul><a href="#quote" class="text-link" data-product="PVC Zip Puller">Create Zip Puller →</a></div>
         <div class="product-visual carousel" data-carousel>
           <div class="carousel-track">
-            <div class="carousel-slide"><svg viewBox="0 0 300 260" aria-label="PVC zip puller illustration"><path d="M150 12v55" stroke="#64748b" stroke-width="15"/><rect x="130" y="50" width="40" height="35" rx="8" fill="#94a3b8" stroke="#475569" stroke-width="5"/><path d="M150 82 215 120 190 210 110 210 85 120Z" fill="#b7832f" stroke="#6b4a1a" stroke-width="7"/><text x="150" y="150" text-anchor="middle" font-size="22" font-weight="900" fill="#fff">ZIP</text><text x="150" y="178" text-anchor="middle" font-size="22" font-weight="900" fill="#fff">PULL</text></svg></div>
+            <div class="carousel-slide"><img viewBox="0 0 300 260" aria-label="PVC zip puller illustration"><path d="M150 12v55" stroke="#64748b" stroke-width="15"/><rect x="130" y="50" width="40" height="35" rx="8" fill="#94a3b8" stroke="#475569" stroke-width="5"/><path d="M150 82 215 120 190 210 110 210 85 120Z" fill="#b7832f" stroke="#6b4a1a" stroke-width="7"/><text x="150" y="150" text-anchor="middle" font-size="22" font-weight="900" fill="#fff">ZIP</text><text x="150" y="178" text-anchor="middle" font-size="22" font-weight="900" fill="#fff">PULL</text></img></div>
             <div class="carousel-slide placeholder-slide"><span>Image 2 — add photo</span></div>
           </div>
           <button type="button" class="carousel-btn prev" aria-label="Previous image">‹</button>
@@ -667,7 +667,7 @@ input[type=file]{padding:10px;font-size:.88rem}
 
   <section class="feature reveal" id="process">
     <div class="container feature-grid">
-      <div class="feature-art"><svg viewBox="0 0 340 270" aria-label="PVC craftsmanship illustration"><path d="M40 35H300V235H40Z" rx="20" fill="#172033" stroke="#d8a84e" stroke-width="8"/><path d="M65 60H275V210H65Z" fill="#26364b" stroke="#8d9aaa" stroke-width="3" stroke-dasharray="6 5"/><circle cx="170" cy="135" r="55" fill="#d8a84e"/><path d="M145 135l18 18 36-43" fill="none" stroke="#172033" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="feature-art"><img viewBox="0 0 340 270" aria-label="PVC craftsmanship illustration"><path d="M40 35H300V235H40Z" rx="20" fill="#172033" stroke="#d8a84e" stroke-width="8"/><path d="M65 60H275V210H65Z" fill="#26364b" stroke="#8d9aaa" stroke-width="3" stroke-dasharray="6 5"/><circle cx="170" cy="135" r="55" fill="#d8a84e"/><path d="M145 135l18 18 36-43" fill="none" stroke="#172033" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/></img></div>
       <div><p class="eyebrow">PVC detail</p><h2>Built for details.</h2><p>Raised layers, recessed areas, sharp edges and realistic material depth bring your design to life.</p><div class="feature-list"><div><strong>3D Depth</strong><span>Raised and recessed details</span></div><div><strong>Durable PVC</strong><span>Built for everyday use</span></div><div><strong>Custom Shapes</strong><span>Your design, your shape</span></div><div><strong>Multiple Colors</strong><span>Create your exact look</span></div></div></div>
     </div>
   </section>
@@ -693,7 +693,7 @@ input[type=file]{padding:10px;font-size:.88rem}
               <div class="field"><label for="quantity">Quantity *</label><input id="quantity" name="Quantity" type="number" min="1" placeholder="Example: 100" required></div>
               <div class="field"><label for="size">Approximate Size</label><input id="size" name="Approximate Size" type="text" placeholder="e.g. 3 x 2 inches"></div>
               <div class="field full"><label for="backing">Backing / Requirements</label><select id="backing" name="Backing / Requirements"><option value="">Select if known</option><option>Hook &amp; Loop (Velcro)</option><option>Iron-on</option><option>Adhesive</option><option>Sew-on</option><option>Key ring / Metal hardware</option><option>Need guidance</option></select></div>
-              <div class="field full"><label for="artwork">Upload Artwork / Logo (optional)</label><input id="artwork" name="attachment" type="file" accept=".jpg,.jpeg,.png,.pdf,.svg,.ai,.eps"></div>
+              <div class="field full"><label for="artwork">Upload Artwork / Logo (optional)</label><input id="artwork" name="attachment" type="file" accept=".jpg,.jpeg,.png,.pdf,.img,.ai,.eps"></div>
               <div class="field full"><label for="message">Additional Details</label><textarea id="message" name="Additional Details" placeholder="Tell us about colors, design, delivery country, deadline, etc."></textarea></div>
             </div>
             <p class="form-note">By sending this form, you agree that STAR LABELS may contact you about your quote. For large artwork files, you can also send the design directly on WhatsApp.</p>
@@ -703,7 +703,7 @@ input[type=file]{padding:10px;font-size:.88rem}
             <h4>Prefer to contact us directly?</h4><p>For quick questions, pricing or to send your artwork, contact us here.</p>
             <div class="contact-stack">
               <a class="btn btn-whatsapp" href="https://wa.me/923187615669" target="_blank" rel="noopener">
-                <svg class="whatsapp-icon" viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 .8A15 15 0 0 0 3.1 23.5L1 31l7.7-2A15.1 15.1 0 1 0 16 .8Zm0 27.4a12.3 12.3 0 0 1-6.3-1.7l-.5-.3-4.6 1.2 1.2-4.5-.3-.5A12.3 12.3 0 1 1 16 28.2Zm6.8-9.2c-.4-.2-2.2-1.1-2.6-1.2-.3-.1-.6-.2-.8.2-.3.4-1 1.2-1.2 1.4-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3-1.9-1.1-1-1.9-2.2-2.1-2.6-.2-.4 0-.6.2-.8l.6-.7c.2-.2.3-.4.4-.6.1-.2 0-.5 0-.7-.1-.2-.8-2-1.1-2.7-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.7.1-1 .5-.4.4-1.3 1.3-1.3 3.1s1.3 3.6 1.5 3.9c.2.3 2.6 4 6.3 5.6.9.4 1.6.6 2.2.7.9.3 1.7.2 2.3.1.7-.1 2.2-.9 2.5-1.8.3-.9.3-1.6.2-1.8-.1-.2-.4-.3-.8-.5Z"/></svg>
+                <img class="whatsapp-icon" viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 .8A15 15 0 0 0 3.1 23.5L1 31l7.7-2A15.1 15.1 0 1 0 16 .8Zm0 27.4a12.3 12.3 0 0 1-6.3-1.7l-.5-.3-4.6 1.2 1.2-4.5-.3-.5A12.3 12.3 0 1 1 16 28.2Zm6.8-9.2c-.4-.2-2.2-1.1-2.6-1.2-.3-.1-.6-.2-.8.2-.3.4-1 1.2-1.2 1.4-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3-1.9-1.1-1-1.9-2.2-2.1-2.6-.2-.4 0-.6.2-.8l.6-.7c.2-.2.3-.4.4-.6.1-.2 0-.5 0-.7-.1-.2-.8-2-1.1-2.7-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.7.1-1 .5-.4.4-1.3 1.3-1.3 3.1s1.3 3.6 1.5 3.9c.2.3 2.6 4 6.3 5.6.9.4 1.6.6 2.2.7.9.3 1.7.2 2.3.1.7-.1 2.2-.9 2.5-1.8.3-.9.3-1.6.2-1.8-.1-.2-.4-.3-.8-.5Z"/></img>
                 Chat on WhatsApp
               </a>
               <p class="contact-number">WhatsApp: <a href="https://wa.me/923187615669" target="_blank" rel="noopener">0318 7615669</a></p>
@@ -736,7 +736,7 @@ input[type=file]{padding:10px;font-size:.88rem}
 </footer>
 
 <a class="floating-wa" href="https://wa.me/923187615669" target="_blank" rel="noopener" aria-label="Chat with STAR LABELS on WhatsApp">
-  <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 .8A15 15 0 0 0 3.1 23.5L1 31l7.7-2A15.1 15.1 0 1 0 16 .8Zm0 27.4a12.3 12.3 0 0 1-6.3-1.7l-.5-.3-4.6 1.2 1.2-4.5-.3-.5A12.3 12.3 0 1 1 16 28.2Zm6.8-9.2c-.4-.2-2.2-1.1-2.6-1.2-.3-.1-.6-.2-.8.2-.3.4-1 1.2-1.2 1.4-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3-1.9-1.1-1-1.9-2.2-2.1-2.6-.2-.4 0-.6.2-.8l.6-.7c.2-.2.3-.4.4-.6.1-.2 0-.5 0-.7-.1-.2-.8-2-1.1-2.7-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.7.1-1 .5-.4.4-1.3 1.3-1.3 3.1s1.3 3.6 1.5 3.9c.2.3 2.6 4 6.3 5.6.9.4 1.6.6 2.2.7.9.3 1.7.2 2.3.1.7-.1 2.2-.9 2.5-1.8.3-.9.3-1.6.2-1.8-.1-.2-.4-.3-.8-.5Z"/></svg>
+  <img viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 .8A15 15 0 0 0 3.1 23.5L1 31l7.7-2A15.1 15.1 0 1 0 16 .8Zm0 27.4a12.3 12.3 0 0 1-6.3-1.7l-.5-.3-4.6 1.2 1.2-4.5-.3-.5A12.3 12.3 0 1 1 16 28.2Zm6.8-9.2c-.4-.2-2.2-1.1-2.6-1.2-.3-.1-.6-.2-.8.2-.3.4-1 1.2-1.2 1.4-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3-1.9-1.1-1-1.9-2.2-2.1-2.6-.2-.4 0-.6.2-.8l.6-.7c.2-.2.3-.4.4-.6.1-.2 0-.5 0-.7-.1-.2-.8-2-1.1-2.7-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.7.1-1 .5-.4.4-1.3 1.3-1.3 3.1s1.3 3.6 1.5 3.9c.2.3 2.6 4 6.3 5.6.9.4 1.6.6 2.2.7.9.3 1.7.2 2.3.1.7-.1 2.2-.9 2.5-1.8.3-.9.3-1.6.2-1.8-.1-.2-.4-.3-.8-.5Z"/></img>
 </a>
 <script>
   const revealItems = document.querySelectorAll('.reveal');
@@ -810,7 +810,7 @@ input[type=file]{padding:10px;font-size:.88rem}
 
     // Interactive logo: click = flip, second click = large preview.
     const heroPatchTrigger = document.getElementById('heroPatchTrigger');
-    const heroPatch = heroPatchTrigger?.querySelector('svg');
+    const heroPatch = heroPatchTrigger?.querySelector('img');
     const logoModal = document.getElementById('logoModal');
     const logoModalLogo = document.getElementById('logoModalLogo');
     const logoModalClose = document.getElementById('logoModalClose');
@@ -839,8 +839,8 @@ input[type=file]{padding:10px;font-size:.88rem}
     function openLogoModal(){
       if(!heroPatch || !logoModalLogo) return;
       logoModalLogo.innerHTML = heroPatch.outerHTML;
-      const modalSvg = logoModalLogo.querySelector('svg');
-      if(modalSvg) modalSvg.style.transform = 'none';
+      const modalimg = logoModalLogo.querySelector('img');
+      if(modalimg) modalimg.style.transform = 'none';
       modalZoom = 1;
       const label = document.getElementById('modalZoomLevel');
       setZoom(logoModalLogo, label, modalZoom);
