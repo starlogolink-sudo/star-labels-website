@@ -331,6 +331,8 @@ input[type=file]{padding:10px;font-size:.88rem}
   padding:13px 16px;border-radius:10px;font-weight:750;overflow-wrap:anywhere;transition:.25s
 }
 .email-button:hover{background:#f8fafc;transform:translateY(-2px)}
+.address-block{font-size:.92rem;color:#374151;line-height:1.5}
+.address-block strong{display:block;color:var(--ink);margin-bottom:2px}
 
 /* CONTACT + FOOTER */
 .contact-band{
@@ -363,6 +365,24 @@ input[type=file]{padding:10px;font-size:.88rem}
 /* SCROLL REVEAL */
 .reveal{opacity:0;transform:translateY(35px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
 .reveal.visible{opacity:1;transform:none}
+
+/* IMAGE LIGHTBOX (click to enlarge) */
+.lightbox{
+  position:fixed;inset:0;z-index:9999;display:grid;place-items:center;
+  opacity:0;visibility:hidden;pointer-events:none;transition:opacity .28s ease,visibility .28s ease
+}
+.lightbox.open{opacity:1;visibility:visible;pointer-events:auto}
+.lightbox-backdrop{position:absolute;inset:0;background:rgba(3,5,9,.85);backdrop-filter:blur(12px)}
+.lightbox-img{
+  position:relative;z-index:2;max-width:92vw;max-height:88vh;border-radius:16px;
+  box-shadow:0 30px 90px rgba(0,0,0,.55);transform:scale(.94);transition:transform .3s cubic-bezier(.16,1,.3,1)
+}
+.lightbox.open .lightbox-img{transform:scale(1)}
+.lightbox-close{
+  position:fixed;top:18px;right:20px;z-index:3;width:44px;height:44px;border-radius:50%;
+  border:0;background:rgba(255,255,255,.12);color:#fff;font-size:28px;line-height:1;cursor:pointer
+}
+.lightbox-close:hover{background:rgba(255,255,255,.2)}
 
 /* ANIMATIONS */
 @keyframes rise{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}
@@ -406,6 +426,8 @@ input[type=file]{padding:10px;font-size:.88rem}
   .hero-visual{min-height:300px;margin-top:10px}.hero h1{letter-spacing:-2px}
   .section{padding:70px 0}.intro{padding:70px 20px}.product-row{gap:28px;margin-bottom:60px}
   .product-row.reverse .product-copy,.product-row.reverse .product-visual{order:initial}
+  .product-row:not(.reverse) .product-copy{order:1}
+  .product-row:not(.reverse) .product-visual{order:2}
   .product-visual{min-height:275px}.feature-grid{gap:30px}.custom-grid{gap:30px}
   .quote-card{padding:22px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}
   .contact-band-inner{align-items:flex-start;flex-direction:column}.footer-grid{grid-template-columns:1fr;gap:25px}
@@ -609,6 +631,7 @@ input[type=file]{padding:10px;font-size:.88rem}
     <div class="container">
       <div class="section-heading"><p class="eyebrow">Our products</p><h2>Made for every detail.</h2><p>Custom-made branded products shaped around your artwork, colors and requirements.</p></div>
       <article class="product-row reveal">
+        <div class="product-copy"><p class="number">01 / PVC</p><h3>Custom PVC Patches</h3><p>Durable, detailed and built for bold designs. Create custom raised PVC patches in almost any shape, color or design.</p><ul><li>3D Raised Details</li><li>Custom Shapes</li><li>Multiple Colors</li><li>Hook &amp; Loop Backing</li><li>Durable PVC Material</li></ul><a href="#quote" class="text-link" data-product="Custom PVC Patch">Create PVC Patch →</a></div>
         <div class="product-visual carousel" data-carousel>
           <div class="carousel-track">
             <div class="carousel-slide"><img src="assets/images/pvc-patch.jpg" alt="Custom PVC Patch"></div>
@@ -618,7 +641,6 @@ input[type=file]{padding:10px;font-size:.88rem}
           <button type="button" class="carousel-btn next" aria-label="Next image">›</button>
           <div class="carousel-dots"><span class="dot active"></span><span class="dot"></span></div>
         </div>
-        <div class="product-copy"><p class="number">01 / PVC</p><h3>Custom PVC Patches</h3><p>Durable, detailed and built for bold designs. Create custom raised PVC patches in almost any shape, color or design.</p><ul><li>3D Raised Details</li><li>Custom Shapes</li><li>Multiple Colors</li><li>Hook &amp; Loop Backing</li><li>Durable PVC Material</li></ul><a href="#quote" class="text-link" data-product="Custom PVC Patch">Create PVC Patch →</a></div>
       </article>
       <article class="product-row reverse reveal">
         <div class="product-copy"><p class="number">02 / EMBROIDERY</p><h3>Custom Embroidery Patches</h3><p>Classic embroidered texture with premium stitching and precise finishing.</p><ul><li>High Quality Thread</li><li>Detailed Stitching</li><li>Custom Shapes</li><li>Multiple Thread Colors</li><li>Premium Backing Options</li></ul><a href="#quote" class="text-link" data-product="Custom Embroidery Patch">Create Embroidery Patch →</a></div>
@@ -633,6 +655,7 @@ input[type=file]{padding:10px;font-size:.88rem}
         </div>
       </article>
       <article class="product-row reveal">
+        <div class="product-copy"><p class="number">03 / KEY CHAINS</p><h3>PVC Key Chains</h3><p>Custom-shaped PVC key chains designed around your logo, character or brand identity.</p><ul><li>Custom Shapes</li><li>Raised 3D Details</li><li>Durable PVC</li><li>Metal Key Ring</li></ul><a href="#quote" class="text-link" data-product="PVC Key Chain">Create Key Chain →</a></div>
         <div class="product-visual carousel" data-carousel>
           <div class="carousel-track">
             <div class="carousel-slide"><img src="assets/images/pvc-keychain.jpg" alt="PVC Key Chain"></div>
@@ -642,7 +665,6 @@ input[type=file]{padding:10px;font-size:.88rem}
           <button type="button" class="carousel-btn next" aria-label="Next image">›</button>
           <div class="carousel-dots"><span class="dot active"></span><span class="dot"></span></div>
         </div>
-        <div class="product-copy"><p class="number">03 / KEY CHAINS</p><h3>PVC Key Chains</h3><p>Custom-shaped PVC key chains designed around your logo, character or brand identity.</p><ul><li>Custom Shapes</li><li>Raised 3D Details</li><li>Durable PVC</li><li>Metal Key Ring</li></ul><a href="#quote" class="text-link" data-product="PVC Key Chain">Create Key Chain →</a></div>
       </article>
       <article class="product-row reverse reveal">
         <div class="product-copy"><p class="number">04 / ZIP PULLERS</p><h3>PVC Zip Pullers</h3><p>Small details that make a big difference. Turn your zipper into a custom branded feature.</p><ul><li>Custom Shapes</li><li>Premium PVC</li><li>Custom Colors</li><li>Multiple Hardware Options</li></ul><a href="#quote" class="text-link" data-product="PVC Zip Puller">Create Zip Puller →</a></div>
@@ -702,6 +724,7 @@ input[type=file]{padding:10px;font-size:.88rem}
               </a>
               <p class="contact-number">WhatsApp: <a href="https://wa.me/923187615669" target="_blank" rel="noopener">0318 7615669</a></p>
               <a class="email-button" href="mailto:starlogolink@gmail.com">✉ Email Us: starlogolink@gmail.com</a>
+              <p class="address-block"><strong>Address</strong>Pakistan, Punjab, Sialkot.<br>Postal Code: 51310</p>
             </div>
           </div>
           <div class="logo-zoom-controls" aria-label="Logo zoom controls">
@@ -723,7 +746,7 @@ input[type=file]{padding:10px;font-size:.88rem}
     <div class="footer-grid">
       <div><a href="#" class="logo">STAR<span>LABELS</span></a><p style="margin-top:15px;max-width:330px">Premium custom PVC patches, embroidery patches, key chains and zip pullers made for your brand.</p></div>
       <div><h4>Quick Links</h4><div class="footer-links"><a href="#products">Products</a><a href="#custom">Request a Quote</a><a href="#process">How It Works</a><a href="#contact">Contact</a></div></div>
-      <div><h4>Contact Us</h4><div class="footer-links"><a href="https://wa.me/923187615669" target="_blank" rel="noopener">WhatsApp: 0318 7615669</a><a href="mailto:starlogolink@gmail.com">starlogolink@gmail.com</a></div></div>
+      <div><h4>Contact Us</h4><div class="footer-links"><a href="https://wa.me/923187615669" target="_blank" rel="noopener">WhatsApp: 0318 7615669</a><a href="mailto:starlogolink@gmail.com">starlogolink@gmail.com</a><span>Sialkot, Punjab, Pakistan — 51310</span></div></div>
     </div>
     <div class="footer-bottom">© <span id="year"></span> STAR LABELS. All rights reserved.</div>
   </div>
@@ -800,6 +823,34 @@ input[type=file]{padding:10px;font-size:.88rem}
       const diff = e.clientX - startX;
       if (Math.abs(diff) > 40) diff > 0 ? goTo(index - 1) : goTo(index + 1);
     });
+  });
+
+  // Click any product/hero/detail image to open it enlarged
+  const imgLightbox = document.getElementById('imgLightbox');
+  const imgLightboxImg = document.getElementById('imgLightboxImg');
+  function openImgLightbox(src, alt){
+    imgLightboxImg.src = src;
+    imgLightboxImg.alt = alt || '';
+    imgLightbox.classList.add('open');
+    imgLightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeImgLightbox(){
+    imgLightbox.classList.remove('open');
+    imgLightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+  document.querySelectorAll('.patch-art img, .carousel-slide img, .feature-art img').forEach(img => {
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', e => {
+      e.stopPropagation();
+      openImgLightbox(img.src, img.alt);
+    });
+  });
+  document.getElementById('imgLightboxClose')?.addEventListener('click', closeImgLightbox);
+  document.getElementById('imgLightboxBackdrop')?.addEventListener('click', closeImgLightbox);
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && imgLightbox.classList.contains('open')) closeImgLightbox();
   });
 
     // Interactive logo: click = flip, second click = large preview.
@@ -907,6 +958,12 @@ input[type=file]{padding:10px;font-size:.88rem}
         <button type="button" id="modalZoomReset">Reset</button>
       </div>
     </div>
+  </div>
+
+  <div class="lightbox" id="imgLightbox" aria-hidden="true">
+    <div class="lightbox-backdrop" id="imgLightboxBackdrop"></div>
+    <button class="lightbox-close" id="imgLightboxClose" type="button" aria-label="Close image">×</button>
+    <img class="lightbox-img" id="imgLightboxImg" src="" alt="">
   </div>
 
 </body>
