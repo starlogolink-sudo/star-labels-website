@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +20,7 @@
     <!-- =========================
          HEADER / NAVIGATION
     ========================== -->
-<img src="images/star-labels-logo.png" alt="Star Labels Logo" class="logo">
+
     <header class="header">
 
         <nav class="navbar">
@@ -410,7 +411,7 @@
 
 
         <!-- =========================
-             CUSTOM DESIGN
+             CUSTOM DESIGN / QUOTE
         ========================== -->
 
         <section class="custom-section" id="custom">
@@ -475,20 +476,65 @@
                         Request a Quote
                     </h3>
 
-                    <form>
+
+                    <!-- =========================
+                         QUOTE FORM
+                    ========================== -->
+
+                    <form
+                        action="https://formsubmit.co/starlogolink@gmail.com"
+                        method="POST"
+                        enctype="multipart/form-data"
+                    >
+
+                        <!-- EMAIL SETTINGS -->
+
+                        <input
+                            type="hidden"
+                            name="_subject"
+                            value="New Quote Request - STAR LABELS"
+                        >
+
+                        <input
+                            type="hidden"
+                            name="_template"
+                            value="table"
+                        >
+
+                        <input
+                            type="hidden"
+                            name="_captcha"
+                            value="true"
+                        >
+
+                        <!--
+                        After successful submission,
+                        customer will return to your website.
+                        -->
+
+                        <input
+                            type="hidden"
+                            name="_next"
+                            value="https://starlogolink-sudo.github.io/star-labels-website/"
+                        >
+
+
+                        <!-- CUSTOMER NAME -->
 
                         <label for="name">
-                            Name
+                            Name *
                         </label>
 
                         <input
                             type="text"
                             id="name"
-                            name="name"
+                            name="Customer Name"
                             placeholder="Your name"
                             required
                         >
 
+
+                        <!-- COMPANY -->
 
                         <label for="company">
                             Company / Brand
@@ -497,77 +543,93 @@
                         <input
                             type="text"
                             id="company"
-                            name="company"
+                            name="Company / Brand"
                             placeholder="Company or brand name"
                         >
 
 
+                        <!-- EMAIL -->
+
                         <label for="email">
-                            Email
+                            Email *
                         </label>
 
                         <input
                             type="email"
                             id="email"
-                            name="email"
+                            name="Customer Email"
                             placeholder="you@example.com"
                             required
                         >
 
 
+                        <!-- PHONE -->
+
                         <label for="phone">
-                            WhatsApp / Phone
+                            WhatsApp / Phone *
                         </label>
 
                         <input
                             type="tel"
                             id="phone"
-                            name="phone"
+                            name="WhatsApp / Phone"
                             placeholder="+92..."
+                            required
                         >
 
 
+                        <!-- PRODUCT -->
+
                         <label for="product">
-                            Product Type
+                            Product Type *
                         </label>
 
-                        <select id="product" name="product">
+                        <select
+                            id="product"
+                            name="Product Type"
+                            required
+                        >
 
                             <option value="">
                                 Select a product
                             </option>
 
-                            <option value="pvc-patch">
+                            <option value="Custom PVC Patch">
                                 Custom PVC Patch
                             </option>
 
-                            <option value="embroidery-patch">
+                            <option value="Custom Embroidery Patch">
                                 Custom Embroidery Patch
                             </option>
 
-                            <option value="pvc-keychain">
+                            <option value="PVC Key Chain">
                                 PVC Key Chain
                             </option>
 
-                            <option value="zip-puller">
+                            <option value="PVC Zip Puller">
                                 PVC Zip Puller
                             </option>
 
                         </select>
 
 
+                        <!-- QUANTITY -->
+
                         <label for="quantity">
-                            Quantity
+                            Quantity *
                         </label>
 
                         <input
                             type="number"
                             id="quantity"
-                            name="quantity"
+                            name="Quantity"
                             placeholder="Example: 100"
                             min="1"
+                            required
                         >
 
+
+                        <!-- SIZE -->
 
                         <label for="size">
                             Approximate Size
@@ -576,320 +638,5 @@
                         <input
                             type="text"
                             id="size"
-                            name="size"
-                            placeholder="Example: 3 x 2 inches"
-                        >
-
-
-                        <label for="notes">
-                            Additional Details
-                        </label>
-
-                        <textarea
-                            id="notes"
-                            name="notes"
-                            rows="5"
-                            placeholder="Tell us about your design..."
-                        ></textarea>
-
-
-                        <label for="design">
-                            Upload Your Design
-                        </label>
-
-                        <input
-                            type="file"
-                            id="design"
-                            name="design"
-                            accept=".png,.jpg,.jpeg,.pdf,.ai,.svg"
-                        >
-
-
-                        <button
-                            type="submit"
-                            class="primary-button"
-                        >
-                            Request a Quote
-                        </button>
-
-                    </form>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             HOW IT WORKS
-        ========================== -->
-
-        <section class="process-section" id="process">
-
-            <div class="section-heading">
-
-                <p class="eyebrow">
-                    SIMPLE PROCESS
-                </p>
-
-                <h2>
-                    From idea to product.
-                </h2>
-
-            </div>
-
-
-            <div class="process-grid">
-
-                <div class="process-step">
-
-                    <span>01</span>
-
-                    <h3>
-                        Send Your Design
-                    </h3>
-
-                    <p>
-                        Upload your artwork and tell us
-                        what you need.
-                    </p>
-
-                </div>
-
-
-                <div class="process-step">
-
-                    <span>02</span>
-
-                    <h3>
-                        Approve Your Sample
-                    </h3>
-
-                    <p>
-                        Review the design and approve
-                        the final production details.
-                    </p>
-
-                </div>
-
-
-                <div class="process-step">
-
-                    <span>03</span>
-
-                    <h3>
-                        Production
-                    </h3>
-
-                    <p>
-                        Your custom products are manufactured
-                        with precision.
-                    </p>
-
-                </div>
-
-
-                <div class="process-step">
-
-                    <span>04</span>
-
-                    <h3>
-                        Delivery
-                    </h3>
-
-                    <p>
-                        Your finished products are prepared
-                        and shipped.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             QUALITY SECTION
-        ========================== -->
-
-        <section class="quality-section" id="about">
-
-            <div class="quality-content">
-
-                <p class="eyebrow">
-                    OUR QUALITY
-                </p>
-
-                <h2>
-                    Every detail matters.
-                </h2>
-
-                <p>
-                    We focus on material quality, accurate colors,
-                    clean finishing and precise production so your
-                    final product looks the way you imagined it.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             FAQ
-        ========================== -->
-
-        <section class="faq-section">
-
-            <div class="section-heading">
-
-                <p class="eyebrow">
-                    FAQ
-                </p>
-
-                <h2>
-                    Frequently asked questions.
-                </h2>
-
-            </div>
-
-
-            <div class="faq-list">
-
-                <details>
-
-                    <summary>
-                        What is the minimum order quantity?
-                    </summary>
-
-                    <p>
-                        Contact us with your design and required
-                        quantity and we'll provide the available options.
-                    </p>
-
-                </details>
-
-
-                <details>
-
-                    <summary>
-                        Can I send my own design?
-                    </summary>
-
-                    <p>
-                        Yes. You can upload your artwork when
-                        requesting a quote.
-                    </p>
-
-                </details>
-
-
-                <details>
-
-                    <summary>
-                        Can you make custom shapes?
-                    </summary>
-
-                    <p>
-                        Yes. Custom shapes can be created according
-                        to your artwork and production requirements.
-                    </p>
-
-                </details>
-
-
-                <details>
-
-                    <summary>
-                        What products can I customize?
-                    </summary>
-
-                    <p>
-                        We offer custom PVC patches, embroidery patches,
-                        PVC key chains and PVC zip pullers.
-                    </p>
-
-                </details>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             FINAL CTA
-        ========================== -->
-
-        <section class="final-cta">
-
-            <p class="eyebrow">
-                READY TO CREATE?
-            </p>
-
-            <h2>
-                Have a design?
-                <br>
-                Let's make it real.
-            </h2>
-
-            <p>
-                Turn your artwork into premium custom products.
-            </p>
-
-            <a href="#quote" class="primary-button">
-                Start Your Custom Order
-            </a>
-
-        </section>
-
-    </main>
-
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
-    <footer class="footer" id="contact">
-
-        <div class="footer-logo">
-            STAR<span>LABELS</span>
-        </div>
-
-        <div class="footer-links">
-
-            <a href="#products">
-                Products
-            </a>
-
-            <a href="#custom">
-                Custom Order
-            </a>
-
-            <a href="#process">
-                How It Works
-            </a>
-
-            <a href="#about">
-                About
-            </a>
-
-            <a href="#quote">
-                Contact
-            </a>
-
-        </div>
-
-        <p>
-            © 2019 STAR LABELS. All rights reserved.
-        </p>
-
-    </footer>
-
-
-    <script src="script.js"></script>
-
-</body>
-
-</html>
+                            name="Approxima
+```
